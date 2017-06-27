@@ -12,7 +12,7 @@
         <!--Alarm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,6 +42,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="StopButton" destination="blg-DF-rYl" id="cpr-RT-zR3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-1570" y="278"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Alarm Controller-->
         <scene sceneID="BMb-kg-564">
             <objects>
-                <viewController id="8nW-Bz-gdT" sceneMemberID="viewController">
+                <viewController id="8nW-Bz-gdT" customClass="SetAlarmController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S66-YF-XKp"/>
                         <viewControllerLayoutGuide type="bottom" id="ImB-7B-HeJ"/>
@@ -118,10 +121,13 @@
                             <constraint firstItem="TBV-kf-0I8" firstAttribute="centerY" secondItem="kU4-Gy-mNy" secondAttribute="centerY" id="iJ5-cy-jF2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timePicker" destination="TBV-kf-0I8" id="n2I-eh-h4G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qH5-f4-DFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="279"/>
+            <point key="canvasLocation" x="964" y="279"/>
         </scene>
     </scenes>
 </document>

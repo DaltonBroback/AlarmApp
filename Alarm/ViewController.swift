@@ -8,20 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    //Testing
+var alarmTime: Date?
 
+class MainViewController: UIViewController {
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        stopButton.titleLabel?.textAlignment = .center
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
 }
 
+class SetAlarmController: UIViewController {
+    
+    @IBOutlet weak var timePicker: UIDatePicker!
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        alarmTime = timePicker.date
+        print(alarmTime!)
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
